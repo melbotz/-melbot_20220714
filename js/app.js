@@ -22,13 +22,13 @@ render(
           <div class="1 col"></div>
           <div class="card 3 col">
           <div class="tc">
-            <img
+          <strong>${doc.gitmark['nick']}</strong> <br/>
+          <img
             src="https://robohash.org/gitmark:01be934fcebf5a1d81f47607af5d9f6080cc2401a4ca1d23c830e95d3caa6f27:0"
           />
           </div>
 
               <p>
-              Name: ${doc.gitmark['nick']} <br/>
               Energy: ${doc.energy} Marks <br/>
               Birth: ${doc.birth} <br/>
         Prev: <a style="color: blue" href="${doc.previous}">${di
@@ -45,9 +45,12 @@ render(
 
           </div>
 
+          <h5 class="tc">Bookmarks</h5>
 
+          <div class="card col tc">
 
           <${Bookmarks} bookmarks="${bookmarks}" />
+          </div>
 
 
           <h4>Activity</h4>

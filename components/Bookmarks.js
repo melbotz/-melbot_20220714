@@ -40,9 +40,8 @@ export default function Bookmarks(props) {
 
 
   return html`
-  <h5>Bookmarks</h5>
 
-  <table>
+  <table class="tc">
     ${b2.map(i => {
     return html`<${Row} bookmarks="${i}" />`
   })}
