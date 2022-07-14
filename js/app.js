@@ -47,9 +47,11 @@ render(
 
           <h5 class="tc">Bookmarks</h5>
 
+          <div class="row">
           <div class="card col tc">
 
           <${Bookmarks} bookmarks="${bookmarks}" />
+          </div>
           </div>
 
 

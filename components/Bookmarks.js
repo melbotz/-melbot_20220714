@@ -41,12 +41,14 @@ export default function Bookmarks(props) {
 
   return html`
 
-  <table class="tc">
+  <div class="tc">
+  <table class="tc" style="  margin-left: auto; margin-right: auto;">
     ${b2.map(i => {
     return html`<${Row} bookmarks="${i}" />`
   })}
 
   </table>
+  </div>
 
         `
 }
