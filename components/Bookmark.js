@@ -17,7 +17,7 @@ export default function Bookmark(props) {
 
   let text = getTextFromUri(uri)
   return html`
-          <td>
+          <td style="text-align: center;">
             <img height="200" src="${image}" /> ${'\n'}
             <br />
             <a style="color: blue" href="${uri}" target="_blank">${text} 🔗</a>
