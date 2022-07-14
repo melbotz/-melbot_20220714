@@ -17,25 +17,34 @@ render(
   html`
           <${Navbar} title="${di.data.gitmark['nick']}" />
 
-          <img
+
+          <div style="font-family: monospace" class="row">
+            <div class="card">
+            <img
             src="https://robohash.org/gitmark:01be934fcebf5a1d81f47607af5d9f6080cc2401a4ca1d23c830e95d3caa6f27:0"
           />
 
-          <pre>
+              <p>
+              Name: ${doc.gitmark['nick']} <br/>
+              Energy: ${doc.energy} Marks <br/>
+              Birth: ${doc.birth} <br/>
+        Prev: <a style="color: blue" href="${doc.previous}">${di
+      .data.previous}</a> <br/>
+        Next: <a style="color: blue" href="${doc.next}">${doc
+      .next}</a> <br/>
+      Address: <a style="color: blue" href="https://chainz.cryptoid.info/marks/address.dws?${di
+      .data.address}.htm" target="_blank">${doc.address}</a> <br/>
+        Nostr: <a  style="color: blue" href="http://bitbots.org:2617/?pubkey=${doc.nostrkey}" target="_blank">${doc.nostrkey}</a>
 
-                  Name: ${doc.gitmark['nick'] + '\n'}
-                  Birth: ${doc.birth} ${'\n'}
-                  Energy: ${doc.energy} Marks ${'\n'}
-                  Address: <a style="color: blue" href="https://chainz.cryptoid.info/marks/address.dws?${di
-      .data.address}.htm" target="_blank">${doc.address}</a> ${'\n'}
-            Previous: <a style="color: blue" href="${doc.previous}">${di
-      .data.previous}</a> ${'\n'}
-            Next: <a style="color: blue" href="${doc.next}">${doc
-      .next}</a> ${'\n'}
-            Nostr: <a  style="color: blue" href="http://bitbots.org:2617/?pubkey=${doc.nostrkey}" target="_blank">${doc.nostrkey}</a>
+              </p>
+            </div>
+          </div>
 
 
-          </pre>
+
+          <${Bookmarks} bookmarks="${bookmarks}" />
+
+
           <h4>Activity</h4>
           <pre>
       <a style="color: blue"
@@ -46,9 +55,6 @@ render(
                   >Genesis</a
                 >
                   </pre>
-
-
-          <${Bookmarks} bookmarks="${bookmarks}" />
 
           <footer>
             |

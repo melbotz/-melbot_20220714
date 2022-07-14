@@ -40,7 +40,7 @@ export default function Bookmarks(props) {
 
 
   return html`
-  <h4>Bookmarks</h4>
+  <h5>Bookmarks</h5>
 
   <table>
     ${b2.map(i => {
