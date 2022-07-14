@@ -19,10 +19,13 @@ render(
 
 
           <div style="font-family: monospace" class="row">
-            <div class="card">
+          <div class="1 col"></div>
+          <div class="card 3 col">
+          <div class="tc">
             <img
             src="https://robohash.org/gitmark:01be934fcebf5a1d81f47607af5d9f6080cc2401a4ca1d23c830e95d3caa6f27:0"
           />
+          </div>
 
               <p>
               Name: ${doc.gitmark['nick']} <br/>
@@ -38,6 +41,8 @@ render(
 
               </p>
             </div>
+            <div class="1 col"></div>
+
           </div>
 
 
