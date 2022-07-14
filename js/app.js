@@ -6,7 +6,7 @@ import '../js/nostrefresh.js'
 
 // COMPONENTS
 import Navbar from '../components/Navbar.js'
-import Bookmark from '../components/Bookmark.js'
+import Bookmarks from '../components/Bookmarks.js'
 
 // INIT
 var doc = di.data
@@ -47,17 +47,8 @@ render(
                 >
                   </pre>
 
-          <h4>Bookmarks</h4>
 
-          <table>
-            <tr>
-              ${bookmarks.map(i => {
-        return html`
-                  <${Bookmark} uri="${i['@id']}" image="${i.image}" />
-                `
-      })}
-            </tr>
-          </table>
+          <${Bookmarks} bookmarks="${bookmarks}" />
 
           <footer>
             |
